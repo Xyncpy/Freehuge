@@ -1,761 +1,657 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>XYN FREE HUGE</title>
+    <title>XYN FREE HUGE</title>
 
-  <!-- Premium Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Background -->
-  <div class="bg-glow glow-1"></div>
-  <div class="bg-glow glow-2"></div>
-  <div class="stars"></div>
+    <div class="stars"></div>
 
-  <div class="container">
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
 
     <!-- HEADER -->
     <header>
 
-      <div class="badge">
-        ✦ OFFICIAL GIVEAWAY ✦
-      </div>
+        <div class="official-badge">
+            ✦ OFFICIAL GIVEAWAY ✦
+        </div>
 
-      <h1>
-        XYN <span>FREE HUGE</span>
-      </h1>
+        <h1>
+            XYN <span>FREE HUGE</span>
+        </h1>
 
-      <p class="subtitle">
-        Complete the requirements for a chance to win!
-      </p>
+        <p class="subtitle">
+            Complete the requirements for a chance to win!
+        </p>
 
     </header>
 
 
-    <!-- MAIN CARD -->
-    <main class="card">
-
-      <div class="shine"></div>
+    <main>
 
 
-      <!-- PRIZE -->
-      <section class="prize">
+        <!-- PRIZE -->
+        <section class="prize-card">
 
-        <div class="prize-icon">
-          🐾
-        </div>
+            <div class="prize-icon">
+                🐾
+            </div>
 
-        <p class="small-title">
-          CURRENT REWARD
-        </p>
+            <div class="prize-text">
 
-        <h2>
-          HUGE PET
-        </h2>
+                <span>CURRENT REWARD</span>
 
-        <p class="reward-text">
-          or 💎 Gems
-        </p>
+                <strong>HUGE PET</strong>
 
-      </section>
+                <small>
+                    or 💎 Gems
+                </small>
 
+            </div>
 
-      <!-- RULES -->
-      <section class="rules">
-
-        <h2 class="section-title">
-          Giveaway Rules
-        </h2>
+        </section>
 
 
-        <!-- SUBSCRIBE -->
-        <div class="rule">
 
-          <div class="rule-number">
-            01
-          </div>
+        <!-- REQUIREMENTS -->
+        <section class="rules">
 
-          <div class="rule-info">
+            <div class="section-title">
 
-            <h3>
-              Subscribe to YouTube
-            </h3>
+                <span>
+                    GIVEAWAY REQUIREMENTS
+                </span>
 
-            <p>
-              Subscribe to my channel before continuing.
-            </p>
-
-          </div>
-
-
-          <div class="rule-action">
-
-            <!-- NO LOADING AT START -->
-            <div
-              class="timer idle"
-              id="subscribeTimer">
-
-              <svg viewBox="0 0 48 48">
-
-                <circle
-                  class="timer-bg"
-                  cx="24"
-                  cy="24"
-                  r="20">
-                </circle>
-
-                <circle
-                  class="timer-progress"
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  id="subscribeCircle">
-                </circle>
-
-              </svg>
-
-              <!-- Hidden number -->
-              <span id="subscribeNumber"></span>
-
-              <!-- Beautiful check -->
-              <div class="success-check">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12.5L9.5 17L19 7.5"></path>
-                </svg>
-              </div>
+                <div></div>
 
             </div>
 
 
-            <a
-              href="https://youtube.com/@xyn._41"
-              target="_blank"
-              class="action-btn youtube"
-              id="subscribeBtn">
 
-              <span class="btn-icon">▶</span>
-              Subscribe
+            <!-- STEP 1 -->
+            <div class="requirement">
 
-            </a>
+                <div class="step-number">
+                    01
+                </div>
 
-          </div>
+                <div class="requirement-info">
 
-        </div>
+                    <h3>
+                        Subscribe to YouTube
+                    </h3>
 
+                    <p>
+                        Subscribe to the XYN YouTube channel.
+                    </p>
 
-
-        <!-- LIKE -->
-        <div class="rule">
-
-          <div class="rule-number">
-            02
-          </div>
-
-          <div class="rule-info">
-
-            <h3>
-              Like the Video
-            </h3>
-
-            <p>
-              Like the giveaway video.
-            </p>
-
-          </div>
+                </div>
 
 
-          <div class="rule-action">
+                <!-- SUBSCRIBE TIMER -->
+                <div
+                    class="timer idle"
+                    id="subscribeTimer"
+                >
 
-            <!-- IDLE: NOTHING ANIMATES -->
-            <div
-              class="timer idle locked"
-              id="likeTimer">
+                    <svg viewBox="0 0 44 44">
 
-              <svg viewBox="0 0 48 48">
+                        <circle
+                            class="timer-bg"
+                            cx="22"
+                            cy="22"
+                            r="19">
+                        </circle>
 
-                <circle
-                  class="timer-bg"
-                  cx="24"
-                  cy="24"
-                  r="20">
-                </circle>
+                        <circle
+                            class="timer-progress"
+                            cx="22"
+                            cy="22"
+                            r="19">
+                        </circle>
 
-                <circle
-                  class="timer-progress"
-                  cx="24"
-                  cy="24"
-                  r="20"
-                  id="likeCircle">
-                </circle>
+                    </svg>
 
-              </svg>
 
-              <span id="likeNumber"></span>
+                    <span></span>
 
-              <div class="success-check">
-                <svg viewBox="0 0 24 24">
-                  <path d="M5 12.5L9.5 17L19 7.5"></path>
-                </svg>
-              </div>
+
+                    <div class="success-check">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M5 12.5L10 17L19 7"></path>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="https://youtube.com/@xyn._41?si=UFt_i9dzcKKu6btZ"
+                    target="_blank"
+                    class="action-btn youtube"
+                    id="subscribeBtn"
+                >
+                    Subscribe
+                </a>
 
             </div>
 
 
-            <a
-              href="#"
-              target="_blank"
-              class="action-btn like disabled"
-              id="likeBtn">
 
-              <span class="btn-icon">♥</span>
-              Like
+            <!-- STEP 2 -->
+            <div class="requirement locked-row">
 
-            </a>
+                <div class="step-number">
+                    02
+                </div>
 
-          </div>
+                <div class="requirement-info">
+
+                    <h3>
+                        Like the Video
+                    </h3>
+
+                    <p>
+                        Like the official giveaway video.
+                    </p>
+
+                </div>
+
+
+                <!-- LIKE TIMER -->
+                <div
+                    class="timer idle locked"
+                    id="likeTimer"
+                >
+
+                    <svg viewBox="0 0 44 44">
+
+                        <circle
+                            class="timer-bg"
+                            cx="22"
+                            cy="22"
+                            r="19">
+                        </circle>
+
+                        <circle
+                            class="timer-progress"
+                            cx="22"
+                            cy="22"
+                            r="19">
+                        </circle>
+
+                    </svg>
+
+
+                    <span></span>
+
+
+                    <div class="success-check">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M5 12.5L10 17L19 7"></path>
+
+                        </svg>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXACT VIDEO LINK -->
+                <a
+                    href="https://youtu.be/hBKPmkY1aQA?si=S-dE9DwjscsYyebQ"
+                    target="_blank"
+                    class="action-btn like disabled"
+                    id="likeBtn"
+                >
+                    Like
+                </a>
+
+            </div>
+
+
+
+            <!-- STEP 3 -->
+            <div class="requirement locked-row">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="requirement-info">
+
+                    <h3>
+                        Leave a Comment
+                    </h3>
+
+                    <p>
+                        Leave a comment on the giveaway video.
+                    </p>
+
+                </div>
+
+
+                <div class="comment-icon">
+                    💬
+                </div>
+
+
+                <!-- EXACT VIDEO LINK -->
+                <a
+                    href="https://youtu.be/hBKPmkY1aQA?si=S-dE9DwjscsYyebQ"
+                    target="_blank"
+                    class="action-btn comment disabled"
+                    id="commentBtn"
+                >
+                    Comment
+                </a>
+
+            </div>
+
+
+
+            <!-- STEP 4 -->
+            <div class="requirement">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="requirement-info">
+
+                    <h3>
+                        Take a Screenshot
+                    </h3>
+
+                    <p>
+                        Show that you completed all requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="final-check">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M5 12.5L10 17L19 7"></path>
+
+                    </svg>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TIKTOK -->
+        <section class="tiktok-card">
+
+            <div class="tiktok-top">
+
+                <span>
+                    FINAL STEP
+                </span>
+
+                <strong>
+                    Send Your Screenshot
+                </strong>
+
+            </div>
+
+
+            <div class="tiktok-content">
+
+                <div class="tiktok-logo">
+                    ♪
+                </div>
+
+
+                <div class="tiktok-info">
+
+                    <span>
+                        MESSAGE ME ON TIKTOK
+                    </span>
+
+                    <strong>
+                        @Xyn_61.us
+                    </strong>
+
+                </div>
+
+
+                <a
+                    href="https://www.tiktok.com/@Xyn_61.us"
+                    target="_blank"
+                    class="tiktok-btn"
+                >
+                    Message Me
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- NOTICE -->
+        <div class="notice">
+
+            <span>✓</span>
+
+            Your entry will be manually checked before the winner is selected.
 
         </div>
-
-
-
-        <!-- COMMENT -->
-        <div class="rule">
-
-          <div class="rule-number">
-            03
-          </div>
-
-          <div class="rule-info">
-
-            <h3>
-              Comment
-            </h3>
-
-            <p>
-              Leave a comment on the giveaway video.
-            </p>
-
-          </div>
-
-
-          <div class="rule-action">
-
-            <a
-              href="#"
-              target="_blank"
-              class="action-btn comment disabled"
-              id="commentBtn">
-
-              <span class="btn-icon">💬</span>
-              Comment
-
-            </a>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- SCREENSHOT -->
-        <div class="rule">
-
-          <div class="rule-number">
-            04
-          </div>
-
-          <div class="rule-info">
-
-            <h3>
-              Take a Screenshot
-            </h3>
-
-            <p>
-              Take a screenshot showing your completed requirements.
-            </p>
-
-          </div>
-
-
-          <!-- PREMIUM CHECK -->
-          <div class="final-check">
-
-            <svg viewBox="0 0 24 24">
-              <path d="M5 12.5L9.5 17L19 7.5"></path>
-            </svg>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- TIKTOK -->
-      <section class="tiktok-box">
-
-        <div class="tiktok-icon">
-          ♪
-        </div>
-
-
-        <div class="tiktok-content">
-
-          <p class="small-title">
-            FINAL STEP
-          </p>
-
-          <h2>
-            Send Your Screenshot
-          </h2>
-
-          <p>
-            Message me on TikTok and send your screenshot.
-          </p>
-
-          <strong>
-            @Xyn_61.us
-          </strong>
-
-        </div>
-
-
-        <a
-          href="https://www.tiktok.com/@Xyn_61.us"
-          target="_blank"
-          class="tiktok-btn">
-
-          Message Me
-
-        </a>
-
-      </section>
-
-
-
-      <!-- NOTICE -->
-      <div class="notice">
-
-        <span>ⓘ</span>
-
-        Your entry will be manually checked before the winner is selected.
-
-      </div>
 
     </main>
 
 
+
+    <!-- FOOTER -->
     <footer>
-      © 2026 XYN FREE HUGE
+
+        <p>
+            © 2026 XYN FREE HUGE • Good luck! ✦
+        </p>
+
     </footer>
 
-  </div>
 
 
+<script>
 
-  <!-- JAVASCRIPT -->
-  <script>
-
-    /*
-    =========================================
-    PUT YOUR GIVEAWAY VIDEO LINK HERE
-    =========================================
-    */
+    /* ==========================================
+       EXACT GIVEAWAY VIDEO LINK
+       ========================================== */
 
     const giveawayVideo =
-      "PASTE-YOUR-YOUTUBE-VIDEO-LINK-HERE";
+        "https://youtu.be/hBKPmkY1aQA?si=S-dE9DwjscsYyebQ";
 
 
-    /*
-    =========================================
-    ELEMENTS
-    =========================================
-    */
+    /* ==========================================
+       ELEMENTS
+       ========================================== */
 
     const subscribeBtn =
-      document.getElementById("subscribeBtn");
-
-    const subscribeTimer =
-      document.getElementById("subscribeTimer");
-
-    const subscribeNumber =
-      document.getElementById("subscribeNumber");
-
-    const subscribeCircle =
-      document.getElementById("subscribeCircle");
-
+        document.getElementById("subscribeBtn");
 
     const likeBtn =
-      document.getElementById("likeBtn");
-
-    const likeTimer =
-      document.getElementById("likeTimer");
-
-    const likeNumber =
-      document.getElementById("likeNumber");
-
-    const likeCircle =
-      document.getElementById("likeCircle");
-
+        document.getElementById("likeBtn");
 
     const commentBtn =
-      document.getElementById("commentBtn");
+        document.getElementById("commentBtn");
+
+    const subscribeTimer =
+        document.getElementById("subscribeTimer");
+
+    const likeTimer =
+        document.getElementById("likeTimer");
 
 
-    /*
-    =========================================
-    VIDEO LINK
-    =========================================
-    */
+    /* ==========================================
+       FORCE VIDEO LINK
+       ========================================== */
 
-    if (
-      giveawayVideo &&
-      giveawayVideo !==
-      "PASTE-YOUR-YOUTUBE-VIDEO-LINK-HERE"
-    ) {
+    likeBtn.href = giveawayVideo;
 
-      likeBtn.href = giveawayVideo;
+    commentBtn.href = giveawayVideo;
 
-      commentBtn.href = giveawayVideo;
+
+    /* ==========================================
+       TIMER
+       ========================================== */
+
+    function startTimer(timer, button, onFinish) {
+
+        if (
+            timer.classList.contains("counting") ||
+            timer.classList.contains("completed")
+        ) {
+            return;
+        }
+
+
+        /* Start animation ONLY after button click */
+
+        timer.classList.remove("idle");
+
+        timer.classList.add("counting");
+
+
+        button.classList.add("processing");
+
+        button.textContent =
+            "Processing...";
+
+
+        /*
+            10 seconds internally.
+
+            The countdown number
+            is NEVER displayed.
+        */
+
+        let timeLeft = 10;
+
+
+        const countdown =
+            setInterval(function () {
+
+                timeLeft--;
+
+
+                if (timeLeft <= 0) {
+
+                    clearInterval(countdown);
+
+
+                    /* Finish timer */
+
+                    timer.classList.remove(
+                        "counting"
+                    );
+
+                    timer.classList.add(
+                        "completed"
+                    );
+
+
+                    /* Finish button */
+
+                    button.classList.remove(
+                        "processing"
+                    );
+
+                    button.classList.add(
+                        "completed"
+                    );
+
+                    button.textContent =
+                        "Completed ✓";
+
+
+                    /* Next step */
+
+                    onFinish();
+
+                }
+
+            }, 1000);
 
     }
 
 
-    /*
-    =========================================
-    START TIMER
-    =========================================
-    */
 
-    function startTimer(
-      timer,
-      number,
-      circle,
-      onFinish
-    ) {
+    /* ==========================================
+       SUBSCRIBE
+       ========================================== */
 
-      let time = 10;
+    subscribeBtn.addEventListener(
+        "click",
+        function () {
 
-      /*
-      Remove idle state
-      */
-
-      timer.classList.remove("idle");
-
-      timer.classList.remove("ready");
-
-      timer.classList.add("counting");
+            if (
+                subscribeBtn.classList.contains(
+                    "processing"
+                ) ||
+                subscribeBtn.classList.contains(
+                    "completed"
+                )
+            ) {
+                return;
+            }
 
 
-      /*
-      IMPORTANT:
-      Number stays HIDDEN.
-      */
+            startTimer(
+                subscribeTimer,
+                subscribeBtn,
+                function () {
 
-      number.textContent = "";
+                    /* Unlock Like */
 
+                    likeBtn.classList.remove(
+                        "disabled"
+                    );
 
-      /*
-      Circle settings
-      */
+                    likeBtn.classList.add(
+                        "ready"
+                    );
 
-      const circumference = 125.6;
-
-      circle.style.strokeDasharray =
-        circumference;
-
-      circle.style.strokeDashoffset =
-        circumference;
+                    likeBtn.style.pointerEvents =
+                        "auto";
 
 
-      /*
-      Start circular animation
-      */
-
-      setTimeout(() => {
-
-        circle.style.strokeDashoffset = "0";
-
-      }, 50);
+                    likeTimer.classList.remove(
+                        "locked"
+                    );
 
 
-      /*
-      Countdown happens internally
-      but NUMBER IS NEVER SHOWN.
-      */
+                    likeBtn.textContent =
+                        "Like";
 
-      const countdown =
-        setInterval(() => {
-
-          time--;
-
-          if (time <= 0) {
-
-            clearInterval(countdown);
-
-
-            /*
-            Finished
-            */
-
-            timer.classList.remove(
-              "counting"
+                }
             );
 
-            timer.classList.add(
-              "completed"
-            );
+        }
+    );
 
 
-            circle.style.strokeDashoffset =
-              "0";
+
+    /* ==========================================
+       LIKE
+       ========================================== */
+
+    likeBtn.addEventListener(
+        "click",
+        function (event) {
 
 
-            /*
-            Show beautiful check
-            */
+            /* Still locked */
 
-            if (onFinish) {
+            if (
+                likeBtn.classList.contains(
+                    "disabled"
+                )
+            ) {
 
-              setTimeout(() => {
+                event.preventDefault();
 
-                onFinish();
-
-              }, 500);
+                return;
 
             }
 
-          }
 
-        }, 1000);
+            /* Already processing */
 
-    }
+            if (
+                likeBtn.classList.contains(
+                    "processing"
+                ) ||
+                likeBtn.classList.contains(
+                    "completed"
+                )
+            ) {
+
+                return;
+
+            }
 
 
+            startTimer(
+                likeTimer,
+                likeBtn,
+                function () {
 
-    /*
-    =========================================
-    SUBSCRIBE CLICK
-    =========================================
-    */
+                    /* Unlock Comment */
 
-    subscribeBtn.addEventListener(
-      "click",
-      function () {
+                    commentBtn.classList.remove(
+                        "disabled"
+                    );
 
-        /*
-        Prevent double click
-        */
+                    commentBtn.classList.add(
+                        "ready"
+                    );
 
-        if (
-          subscribeBtn.classList.contains(
-            "processing"
-          ) ||
-          subscribeBtn.classList.contains(
-            "completed"
-          )
-        ) {
+                    commentBtn.style.pointerEvents =
+                        "auto";
 
-          return;
+
+                    commentBtn.textContent =
+                        "Comment";
+
+                }
+            );
 
         }
-
-
-        subscribeBtn.classList.add(
-          "processing"
-        );
-
-
-        subscribeBtn.innerHTML =
-          '<span class="btn-icon">✓</span> Processing...';
-
-
-        /*
-        ONLY NOW DOES THE CIRCLE LOAD
-        */
-
-        startTimer(
-          subscribeTimer,
-          subscribeNumber,
-          subscribeCircle,
-          enableLike
-        );
-
-      }
     );
 
 
 
-    /*
-    =========================================
-    ENABLE LIKE
-    =========================================
-    */
+    /* ==========================================
+       COMMENT
+       ========================================== */
 
-    function enableLike() {
+    commentBtn.addEventListener(
+        "click",
+        function (event) {
 
-      subscribeBtn.classList.remove(
-        "processing"
-      );
+            if (
+                commentBtn.classList.contains(
+                    "disabled"
+                )
+            ) {
 
-      subscribeBtn.classList.add(
-        "completed"
-      );
+                event.preventDefault();
 
+                return;
 
-      subscribeBtn.innerHTML =
-        '<span class="btn-icon">✓</span> Completed';
-
-
-      /*
-      Unlock Like
-      */
-
-      likeBtn.classList.remove(
-        "disabled"
-      );
-
-      likeBtn.classList.add(
-        "ready"
-      );
-
-
-      /*
-      Like circle is STILL NOT LOADING.
-      It remains completely idle.
-      */
-
-      likeTimer.classList.remove(
-        "locked"
-      );
-
-      likeTimer.classList.add(
-        "ready"
-      );
-
-    }
-
-
-
-    /*
-    =========================================
-    LIKE CLICK
-    =========================================
-    */
-
-    likeBtn.addEventListener(
-      "click",
-      function (event) {
-
-        /*
-        Still locked
-        */
-
-        if (
-          likeBtn.classList.contains(
-            "disabled"
-          )
-        ) {
-
-          event.preventDefault();
-
-          return;
+            }
 
         }
-
-
-        /*
-        Prevent double click
-        */
-
-        if (
-          likeBtn.classList.contains(
-            "processing"
-          ) ||
-          likeBtn.classList.contains(
-            "completed"
-          )
-        ) {
-
-          return;
-
-        }
-
-
-        likeBtn.classList.add(
-          "processing"
-        );
-
-
-        likeBtn.innerHTML =
-          '<span class="btn-icon">♥</span> Processing...';
-
-
-        /*
-        ONLY NOW DOES LIKE TIMER LOAD
-        */
-
-        startTimer(
-          likeTimer,
-          likeNumber,
-          likeCircle,
-          finishLike
-        );
-
-      }
     );
 
-
-
-    /*
-    =========================================
-    FINISH LIKE
-    =========================================
-    */
-
-    function finishLike() {
-
-      likeBtn.classList.remove(
-        "processing"
-      );
-
-      likeBtn.classList.add(
-        "completed"
-      );
-
-
-      likeBtn.innerHTML =
-        '<span class="btn-icon">✓</span> Completed';
-
-
-      /*
-      Unlock Comment
-      */
-
-      commentBtn.classList.remove(
-        "disabled"
-      );
-
-      commentBtn.classList.add(
-        "ready"
-      );
-
-    }
-
-  </script>
+</script>
 
 </body>
 </html>
