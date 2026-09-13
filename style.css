@@ -1,116 +1,1341 @@
-/* =========================================
+/* ==========================================
    RESET
-========================================= */
+   ========================================== */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 
 body {
-  min-height: 100vh;
+    min-height: 100vh;
 
-  font-family:
-    "Inter",
-    sans-serif;
+    font-family: "Inter", sans-serif;
 
-  color: #ffffff;
+    color: #f5f7fb;
 
-  background:
-    radial-gradient(
-      circle at 15% 10%,
-      rgba(126, 61, 255, 0.20),
-      transparent 30%
-    ),
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(107, 52, 255, 0.14),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            rgba(0, 180, 255, 0.10),
+            transparent 30%
+        ),
+        #070910;
 
-    radial-gradient(
-      circle at 85% 90%,
-      rgba(0, 195, 255, 0.12),
-      transparent 30%
-    ),
-
-    #070910;
-
-  overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 
 
-/* =========================================
-   BACKGROUND
-========================================= */
-
-.bg-glow {
-  position: fixed;
-
-  width: 420px;
-  height: 420px;
-
-  border-radius: 50%;
-
-  filter: blur(110px);
-
-  opacity: 0.20;
-
-  pointer-events: none;
-
-  z-index: 0;
-
-  animation:
-    floatGlow 9s ease-in-out infinite;
-}
-
-.glow-1 {
-  top: -200px;
-  left: -180px;
-
-  background: #7435ff;
-}
-
-.glow-2 {
-  right: -180px;
-  bottom: -200px;
-
-  background: #00bfff;
-
-  animation-delay: -4s;
-}
-
-@keyframes floatGlow {
-
-  0%,
-  100% {
-    transform: translate(0, 0);
-  }
-
-  50% {
-    transform: translate(35px, -25px);
-  }
-}
-
-
-
-/* =========================================
-   STARS
-========================================= */
+/* ==========================================
+   BACKGROUND STARS
+   ========================================== */
 
 .stars {
-  position: fixed;
+    position: fixed;
 
-  inset: 0;
+    inset: 0;
 
-  pointer-events: none;
+    pointer-events: none;
 
-  opacity: 0.35;
+    opacity: .45;
 
-  background-image:
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.8) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.5) 1px,
+            transparent 1px
+        );
 
-    radial-gradient(
+    background-size:
+        90px 90px,
+        150px 150px;
+
+    background-position:
+        0 0,
+        40px 70px;
+
+    animation:
+        starsMove 18s linear infinite;
+}
+
+
+@keyframes starsMove {
+
+    from {
+        background-position:
+            0 0,
+            40px 70px;
+    }
+
+    to {
+        background-position:
+            90px 90px,
+            190px 220px;
+    }
+
+}
+
+
+
+/* ==========================================
+   GLOW
+   ========================================== */
+
+.glow {
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    pointer-events: none;
+
+    opacity: .18;
+}
+
+
+.glow-one {
+    top: -200px;
+    left: -150px;
+
+    background: #7047ff;
+}
+
+
+.glow-two {
+    right: -200px;
+    bottom: -200px;
+
+    background: #008cff;
+}
+
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+header {
+    position: relative;
+
+    z-index: 1;
+
+    text-align: center;
+
+    padding:
+        70px
+        20px
+        35px;
+}
+
+
+.official-badge {
+    display: inline-block;
+
+    padding:
+        8px
+        16px;
+
+    border:
+        1px solid
+        rgba(140,110,255,.35);
+
+    border-radius: 999px;
+
+    background:
+        rgba(92,65,190,.10);
+
+    color: #bcaeff;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 22px;
+}
+
+
+header h1 {
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size:
+        clamp(
+            42px,
+            9vw,
+            76px
+        );
+
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -3px;
+}
+
+
+header h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #a88cff,
+            #61c9ff,
+            #ffffff
+        );
+
+    background-size: 250% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation:
+        gradientMove 5s linear infinite;
+}
+
+
+@keyframes gradientMove {
+
+    to {
+        background-position:
+            250% center;
+    }
+
+}
+
+
+.subtitle {
+    margin-top: 18px;
+
+    color: #8e96aa;
+
+    font-size: 15px;
+}
+
+
+
+/* ==========================================
+   MAIN
+   ========================================== */
+
+main {
+    width:
+        min(
+            850px,
+            calc(100% - 30px)
+        );
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+/* ==========================================
+   PRIZE CARD
+   ========================================== */
+
+.prize-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 25px;
+
+    margin-bottom: 28px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(110,80,255,.13),
+            rgba(20,25,40,.8)
+        );
+
+    box-shadow:
+        0 20px 70px
+        rgba(0,0,0,.35),
+
+        inset 0 1px
+        rgba(255,255,255,.04);
+
+    overflow: hidden;
+}
+
+
+.prize-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+
+    height: 100%;
+
+    top: 0;
+
+    left: -250px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.08),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    animation:
+        shine 5s infinite;
+}
+
+
+@keyframes shine {
+
+    0% {
+        left: -250px;
+    }
+
+    35%,
+    100% {
+        left: 110%;
+    }
+
+}
+
+
+.prize-icon {
+
+    width: 75px;
+    height: 75px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 20px;
+
+    font-size: 36px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.prize-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.prize-text span {
+
+    color: #7d869b;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.prize-text strong {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 26px;
+}
+
+
+.prize-text small {
+
+    color: #9da5b7;
+}
+
+
+
+/* ==========================================
+   SECTION TITLE
+   ========================================== */
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin:
+        30px
+        5px
+        12px;
+}
+
+
+.section-title span {
+
+    color: #71798d;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+
+.section-title div {
+
+    height: 1px;
+
+    flex: 1;
+
+    background: #202534;
+}
+
+
+
+/* ==========================================
+   REQUIREMENT CARD
+   ========================================== */
+
+.requirement {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 96px;
+
+    margin-bottom: 10px;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    background:
+        rgba(15,18,29,.82);
+
+    transition: .25s ease;
+}
+
+
+.requirement:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(145,120,255,.25);
+
+    background:
+        rgba(20,23,37,.9);
+}
+
+
+.step-number {
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    color: #858da0;
+
+    background: #171b27;
+
+    border:
+        1px solid
+        #252b3a;
+
+    font-size: 11px;
+
+    font-weight: 800;
+}
+
+
+.requirement-info {
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.requirement-info h3 {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+
+.requirement-info p {
+
+    color: #7f879a;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+
+/* ==========================================
+   TIMER
+   ========================================== */
+
+.timer {
+
+    width: 48px;
+    height: 48px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+.timer svg {
+
+    width: 48px;
+    height: 48px;
+
+    transform:
+        rotate(-90deg);
+}
+
+
+.timer-bg {
+
+    fill: none;
+
+    stroke: #252a38;
+
+    stroke-width: 3;
+}
+
+
+.timer-progress {
+
+    fill: none;
+
+    stroke: #777f91;
+
+    stroke-width: 3;
+
+    stroke-linecap: round;
+
+    stroke-dasharray:
+        119.38;
+
+    stroke-dashoffset:
+        119.38;
+}
+
+
+
+/*
+   IMPORTANT:
+
+   IDLE:
+   - No animation
+   - No spinner
+   - No number
+*/
+
+.timer.idle .timer-progress {
+
+    stroke-dashoffset:
+        119.38;
+}
+
+
+.timer span {
+
+    display: none !important;
+}
+
+
+
+/* ==========================================
+   COUNTING
+   ========================================== */
+
+.timer.counting::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border-radius: 50%;
+
+    border:
+        3px solid
+        #303646;
+
+    border-top-color:
+        #9c82ff;
+
+    animation:
+        spin .8s linear infinite;
+}
+
+
+@keyframes spin {
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+
+/* ==========================================
+   COMPLETED TIMER
+   ========================================== */
+
+.timer.completed
+.timer-progress {
+
+    stroke: #55e68c;
+
+    stroke-dashoffset: 0;
+
+    transition:
+        stroke-dashoffset
+        .4s ease;
+}
+
+
+.timer.completed::after {
+    display: none;
+}
+
+
+
+/* ==========================================
+   SUCCESS CHECK
+   ========================================== */
+
+.success-check,
+.final-check {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #13271c;
+
+    border:
+        1px solid
+        rgba(85,230,140,.35);
+
+    opacity: 0;
+
+    transform:
+        scale(.65);
+
+    transition: .35s ease;
+}
+
+
+.timer.completed .success-check {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+}
+
+
+.success-check svg,
+.final-check svg {
+
+    width: 25px;
+    height: 25px;
+}
+
+
+.success-check path,
+.final-check path {
+
+    fill: none;
+
+    stroke: #55e68c;
+
+    stroke-width: 2.5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+
+    stroke-dasharray: 30;
+
+    stroke-dashoffset: 30;
+}
+
+
+.timer.completed
+.success-check path,
+.final-check path {
+
+    animation:
+        checkDraw .45s ease forwards;
+}
+
+
+@keyframes checkDraw {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}
+
+
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+
+.action-btn {
+
+    min-width: 108px;
+
+    padding:
+        12px
+        17px;
+
+    border-radius: 12px;
+
+    border:
+        1px solid
+        transparent;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    color: white;
+
+    transition: .2s ease;
+}
+
+
+.action-btn:hover {
+
+    transform:
+        translateY(-1px);
+}
+
+
+.youtube {
+
+    background:
+        #e6293f;
+
+    box-shadow:
+        0 8px 25px
+        rgba(230,41,63,.18);
+}
+
+
+.like {
+
+    background:
+        #7957e8;
+
+    box-shadow:
+        0 8px 25px
+        rgba(121,87,232,.18);
+}
+
+
+.comment {
+
+    background:
+        #2489e8;
+
+    box-shadow:
+        0 8px 25px
+        rgba(36,137,232,.18);
+}
+
+
+.action-btn.processing {
+
+    pointer-events: none;
+
+    opacity: .7;
+}
+
+
+.action-btn.completed {
+
+    background:
+        #163321;
+
+    color:
+        #65eb95;
+
+    border-color:
+        rgba(85,230,140,.3);
+
+    pointer-events: none;
+}
+
+
+.action-btn.disabled {
+
+    opacity: .28;
+
+    filter:
+        grayscale(.5);
+
+    pointer-events: none;
+}
+
+
+.action-btn.ready {
+
+    animation:
+        readyPulse
+        1.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes readyPulse {
+
+    0%,
+    100% {
+
+        box-shadow:
+            0 0 0
+            rgba(121,87,232,0);
+
+    }
+
+    50% {
+
+        box-shadow:
+            0 0 25px
+            rgba(121,87,232,.25);
+
+    }
+
+}
+
+
+
+/* ==========================================
+   COMMENT ICON
+   ========================================== */
+
+.comment-icon {
+
+    width: 48px;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    opacity: .8;
+}
+
+
+
+/* ==========================================
+   FINAL CHECK
+   ========================================== */
+
+.final-check {
+
+    position: relative;
+
+    inset: auto;
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    opacity: 1;
+
+    transform: none;
+}
+
+
+
+/* ==========================================
+   TIKTOK
+   ========================================== */
+
+.tiktok-card {
+
+    margin-top: 28px;
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.045),
+            rgba(255,255,255,.015)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+
+.tiktok-top {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-bottom: 18px;
+}
+
+
+.tiktok-top span {
+
+    color: #8d95a9;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.tiktok-top strong {
+
+    font-family:
+        "Space Grotesk",
+        sans-serif;
+
+    font-size: 19px;
+}
+
+
+.tiktok-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.tiktok-logo {
+
+    width: 50px;
+    height: 50px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 15px;
+
+    background: #050609;
+
+    border:
+        1px solid
+        #292d38;
+
+    font-size: 24px;
+}
+
+
+.tiktok-info {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.tiktok-info span {
+
+    color: #7d8598;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.tiktok-info strong {
+
+    font-size: 14px;
+}
+
+
+.tiktok-btn {
+
+    padding:
+        12px
+        17px;
+
+    border-radius: 11px;
+
+    background: white;
+
+    color: #080a10;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    transition: .2s ease;
+}
+
+
+.tiktok-btn:hover {
+
+    transform:
+        translateY(-2px);
+}
+
+
+
+/* ==========================================
+   NOTICE
+   ========================================== */
+
+.notice {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin:
+        22px
+        0;
+
+    color: #70798c;
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+
+.notice span {
+
+    color: #55e68c;
+
+    font-weight: 900;
+}
+
+
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+footer {
+
+    padding: 20px;
+
+    text-align: center;
+
+    color: #4e5668;
+
+    font-size: 10px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 650px) {
+
+    header {
+
+        padding-top: 50px;
+    }
+
+
+    header h1 {
+
+        letter-spacing: -2px;
+    }
+
+
+    .prize-card {
+
+        padding: 18px;
+    }
+
+
+    .prize-icon {
+
+        width: 60px;
+        height: 60px;
+
+        font-size: 28px;
+    }
+
+
+    .prize-text strong {
+
+        font-size: 21px;
+    }
+
+
+    .requirement {
+
+        gap: 10px;
+
+        padding: 14px;
+    }
+
+
+    .step-number {
+
+        width: 36px;
+        height: 36px;
+
+        border-radius: 10px;
+
+        font-size: 9px;
+    }
+
+
+    .requirement-info h3 {
+
+        font-size: 14px;
+    }
+
+
+    .requirement-info p {
+
+        font-size: 10px;
+    }
+
+
+    .timer {
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .timer svg {
+
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .action-btn {
+
+        min-width: 80px;
+
+        padding:
+            10px
+            9px;
+
+        font-size: 10px;
+    }
+
+
+    .comment-icon {
+
+        display: none;
+    }
+
+
+    .tiktok-content {
+
+        flex-wrap: wrap;
+    }
+
+
+    .tiktok-info {
+
+        min-width: 150px;
+    }
+
+
+    .tiktok-btn {
+
+        width: 100%;
+
+        text-align: center;
+
+        margin-top: 5px;
+    }
+
+}
+
+
+
+/* ==========================================
+   VERY SMALL PHONES
+   ========================================== */
+
+@media (max-width: 390px) {
+
+    main {
+
+        width:
+            calc(100% - 20px);
+    }
+
+
+    .requirement {
+
+        gap: 7px;
+    }
+
+
+    .timer {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .timer svg {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .action-btn {
+
+        min-width: 70px;
+
+        padding:
+            9px
+            7px;
+    }
+
+}    radial-gradient(
       1px 1px at 10% 20%,
       white,
       transparent
