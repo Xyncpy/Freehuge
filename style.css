@@ -8,35 +8,33 @@
   box-sizing: border-box;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
-
 
 body {
   min-height: 100vh;
 
   font-family:
-    Inter,
-    Arial,
-    Helvetica,
+    "Inter",
     sans-serif;
+
+  color: #ffffff;
 
   background:
     radial-gradient(
-      circle at 20% 10%,
-      rgba(112, 55, 255, 0.18),
+      circle at 15% 10%,
+      rgba(126, 61, 255, 0.20),
       transparent 30%
     ),
-    radial-gradient(
-      circle at 80% 90%,
-      rgba(0, 200, 255, 0.12),
-      transparent 30%
-    ),
-    #070910;
 
-  color: #ffffff;
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(0, 195, 255, 0.12),
+      transparent 30%
+    ),
+
+    #070910;
 
   overflow-x: hidden;
 }
@@ -44,7 +42,7 @@ body {
 
 
 /* =========================================
-   BACKGROUND GLOW
+   BACKGROUND
 ========================================= */
 
 .bg-glow {
@@ -55,37 +53,35 @@ body {
 
   border-radius: 50%;
 
-  filter: blur(100px);
+  filter: blur(110px);
 
-  opacity: 0.22;
+  opacity: 0.20;
 
   pointer-events: none;
 
   z-index: 0;
 
-  animation: floatingGlow 8s ease-in-out infinite;
+  animation:
+    floatGlow 9s ease-in-out infinite;
 }
-
 
 .glow-1 {
-  top: -180px;
+  top: -200px;
   left: -180px;
 
-  background: #7d35ff;
+  background: #7435ff;
 }
-
 
 .glow-2 {
   right: -180px;
-  bottom: -180px;
+  bottom: -200px;
 
-  background: #00c8ff;
+  background: #00bfff;
 
   animation-delay: -4s;
 }
 
-
-@keyframes floatingGlow {
+@keyframes floatGlow {
 
   0%,
   100% {
@@ -93,15 +89,14 @@ body {
   }
 
   50% {
-    transform: translate(30px, -20px);
+    transform: translate(35px, -25px);
   }
-
 }
 
 
 
 /* =========================================
-   MOVING STARS
+   STARS
 ========================================= */
 
 .stars {
@@ -111,52 +106,53 @@ body {
 
   pointer-events: none;
 
-  opacity: 0.45;
+  opacity: 0.35;
 
   background-image:
+
     radial-gradient(
       1px 1px at 10% 20%,
-      #ffffff,
+      white,
       transparent
     ),
+
     radial-gradient(
-      1px 1px at 20% 70%,
-      #ffffff,
+      1px 1px at 25% 80%,
+      white,
       transparent
     ),
+
     radial-gradient(
-      1px 1px at 35% 40%,
-      #ffffff,
+      1px 1px at 40% 35%,
+      white,
       transparent
     ),
+
     radial-gradient(
-      1px 1px at 50% 15%,
-      #ffffff,
+      1px 1px at 55% 70%,
+      white,
       transparent
     ),
+
     radial-gradient(
-      1px 1px at 65% 80%,
-      #ffffff,
+      1px 1px at 75% 25%,
+      white,
       transparent
     ),
+
     radial-gradient(
-      1px 1px at 80% 30%,
-      #ffffff,
-      transparent
-    ),
-    radial-gradient(
-      1px 1px at 90% 70%,
-      #ffffff,
+      1px 1px at 90% 65%,
+      white,
       transparent
     );
 
-  animation: starMove 15s linear infinite;
+  animation:
+    starsMove 16s linear infinite;
 
   z-index: 0;
 }
 
-
-@keyframes starMove {
+@keyframes starsMove {
 
   from {
     transform: translateY(0);
@@ -165,7 +161,6 @@ body {
   to {
     transform: translateY(-100px);
   }
-
 }
 
 
@@ -180,13 +175,13 @@ body {
   z-index: 1;
 
   width: min(
-    100% - 30px,
+    calc(100% - 30px),
     900px
   );
 
   margin: auto;
 
-  padding: 50px 0 30px;
+  padding: 55px 0 30px;
 }
 
 
@@ -198,77 +193,58 @@ body {
 header {
   text-align: center;
 
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
-
 .badge {
-  display: inline-block;
+  display: inline-flex;
 
-  padding: 8px 16px;
-
-  border: 1px solid
-    rgba(166, 116, 255, 0.45);
+  padding: 9px 17px;
 
   border-radius: 999px;
 
+  border: 1px solid
+    rgba(169, 112, 255, 0.40);
+
   background:
-    rgba(118, 60, 255, 0.10);
+    rgba(124, 61, 255, 0.10);
 
-  color: #c8a9ff;
+  color: #c9a7ff;
 
-  font-size: 12px;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-  font-weight: 800;
+  font-size: 11px;
+
+  font-weight: 700;
 
   letter-spacing: 2px;
 
   box-shadow:
-    0 0 25px
-    rgba(128, 67, 255, 0.15);
-
-  animation: badgeGlow 3s ease-in-out infinite;
+    0 0 30px
+    rgba(126, 62, 255, 0.15);
 }
-
-
-@keyframes badgeGlow {
-
-  0%,
-  100% {
-    box-shadow:
-      0 0 20px
-      rgba(128, 67, 255, 0.12);
-  }
-
-  50% {
-    box-shadow:
-      0 0 35px
-      rgba(128, 67, 255, 0.30);
-  }
-
-}
-
 
 header h1 {
   margin-top: 20px;
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
   font-size: clamp(
-    42px,
+    45px,
     9vw,
     82px
   );
 
   line-height: 0.95;
 
-  font-weight: 950;
+  font-weight: 700;
 
   letter-spacing: -4px;
-
-  text-shadow:
-    0 0 30px
-    rgba(155, 93, 255, 0.25);
 }
-
 
 header h1 span {
   display: block;
@@ -277,14 +253,15 @@ header h1 span {
     linear-gradient(
       90deg,
       #ffffff,
-      #a56cff,
-      #59d8ff,
+      #a76bff,
+      #62d9ff,
       #ffffff
     );
 
   background-size: 250% auto;
 
   -webkit-background-clip: text;
+
   background-clip: text;
 
   color: transparent;
@@ -293,28 +270,27 @@ header h1 span {
     gradientMove 5s linear infinite;
 }
 
-
 @keyframes gradientMove {
 
   to {
     background-position: 250% center;
   }
-
 }
-
 
 .subtitle {
   margin-top: 15px;
 
-  color: #8e96aa;
+  color: #8b93a8;
 
-  font-size: 15px;
+  font-size: 14px;
+
+  font-weight: 500;
 }
 
 
 
 /* =========================================
-   MAIN CARD
+   CARD
 ========================================= */
 
 .card {
@@ -327,31 +303,32 @@ header h1 span {
   border-radius: 28px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
 
   background:
     linear-gradient(
       145deg,
-      rgba(22, 26, 39, 0.97),
-      rgba(10, 13, 21, 0.97)
+      rgba(22,26,40,0.97),
+      rgba(8,11,18,0.98)
     );
 
   box-shadow:
-    0 30px 80px
-    rgba(0, 0, 0, 0.45),
-    inset 0 1px 0
-    rgba(255, 255, 255, 0.04);
-}
 
+    0 30px 90px
+    rgba(0,0,0,0.45),
+
+    inset 0 1px 0
+    rgba(255,255,255,0.05);
+}
 
 .shine {
   position: absolute;
 
-  width: 350px;
+  width: 300px;
   height: 100%;
 
+  left: -450px;
   top: 0;
-  left: -500px;
 
   transform: skewX(-20deg);
 
@@ -359,30 +336,29 @@ header h1 span {
     linear-gradient(
       90deg,
       transparent,
-      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.07),
       transparent
     );
 
-  animation: cardShine 7s ease-in-out infinite;
+  animation:
+    shineMove 8s ease-in-out infinite;
 
   pointer-events: none;
 }
 
-
-@keyframes cardShine {
+@keyframes shineMove {
 
   0% {
-    left: -500px;
+    left: -450px;
   }
 
   35% {
-    left: 110%;
+    left: 120%;
   }
 
   100% {
-    left: 110%;
+    left: 120%;
   }
-
 }
 
 
@@ -392,8 +368,6 @@ header h1 span {
 ========================================= */
 
 .prize {
-  position: relative;
-
   text-align: center;
 
   padding: 35px 20px;
@@ -403,53 +377,48 @@ header h1 span {
   border-radius: 22px;
 
   border: 1px solid
-    rgba(166, 107, 255, 0.18);
+    rgba(157, 94, 255, 0.18);
 
   background:
     radial-gradient(
-      circle at center,
-      rgba(122, 67, 255, 0.16),
+      circle,
+      rgba(125,65,255,0.15),
       transparent 65%
     );
-
-  box-shadow:
-    inset 0 0 50px
-    rgba(102, 55, 255, 0.04);
 }
 
-
 .prize-icon {
-  display: inline-flex;
+  display: flex;
 
   align-items: center;
   justify-content: center;
 
-  width: 80px;
-  height: 80px;
+  width: 78px;
+  height: 78px;
 
-  margin-bottom: 15px;
+  margin: 0 auto 16px;
 
   border-radius: 50%;
+
+  border: 1px solid
+    rgba(174,117,255,0.35);
 
   background:
     linear-gradient(
       145deg,
-      #201438,
-      #111522
+      #21143b,
+      #0d111c
     );
 
-  border: 1px solid
-    rgba(177, 119, 255, 0.35);
-
-  font-size: 38px;
+  font-size: 36px;
 
   box-shadow:
     0 0 45px
-    rgba(132, 68, 255, 0.30);
+    rgba(130,70,255,0.28);
 
-  animation: prizeFloat 3s ease-in-out infinite;
+  animation:
+    prizeFloat 3s ease-in-out infinite;
 }
-
 
 @keyframes prizeFloat {
 
@@ -461,14 +430,12 @@ header h1 span {
   50% {
     transform: translateY(-7px);
   }
-
 }
-
 
 .small-title {
   color: #858da2;
 
-  font-size: 11px;
+  font-size: 10px;
 
   font-weight: 800;
 
@@ -477,30 +444,30 @@ header h1 span {
   text-transform: uppercase;
 }
 
-
 .prize h2 {
   margin-top: 5px;
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
   font-size: 35px;
 
-  font-weight: 900;
+  font-weight: 700;
 
   letter-spacing: 1px;
 
-  color: #ffffff;
-
   text-shadow:
     0 0 25px
-    rgba(161, 100, 255, 0.35);
+    rgba(161,100,255,0.35);
 }
-
 
 .reward-text {
   margin-top: 5px;
 
-  color: #a8afc1;
+  color: #a4acbd;
 
-  font-size: 15px;
+  font-size: 14px;
 }
 
 
@@ -509,18 +476,19 @@ header h1 span {
    RULES
 ========================================= */
 
-.rules > h2 {
+.section-title {
   margin-bottom: 18px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
   font-size: 22px;
 
-  font-weight: 850;
+  font-weight: 700;
 }
 
-
 .rule {
-  position: relative;
-
   display: flex;
 
   align-items: center;
@@ -536,59 +504,58 @@ header h1 span {
   border-radius: 18px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.06);
+    rgba(255,255,255,0.06);
 
   background:
-    rgba(255, 255, 255, 0.025);
+    rgba(255,255,255,0.025);
 
   transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    background 0.25s ease;
+    0.25s ease;
 }
-
 
 .rule:hover {
   transform: translateY(-2px);
 
   border-color:
-    rgba(157, 96, 255, 0.25);
+    rgba(158,96,255,0.28);
 
   background:
-    rgba(140, 80, 255, 0.045);
+    rgba(145,80,255,0.045);
 }
-
 
 .rule-number {
   flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
 
   display: flex;
 
   align-items: center;
   justify-content: center;
 
-  width: 45px;
-  height: 45px;
-
   border-radius: 14px;
 
   background:
     linear-gradient(
       145deg,
-      rgba(133, 72, 255, 0.20),
-      rgba(60, 36, 110, 0.12)
+      rgba(130,70,255,0.20),
+      rgba(50,30,100,0.12)
     );
 
   border: 1px solid
-    rgba(161, 103, 255, 0.18);
+    rgba(161,103,255,0.18);
 
-  color: #b999ff;
+  color: #b998ff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
   font-size: 12px;
 
-  font-weight: 900;
+  font-weight: 700;
 }
-
 
 .rule-info {
   flex: 1;
@@ -596,24 +563,25 @@ header h1 span {
   min-width: 0;
 }
 
-
 .rule-info h3 {
-  font-size: 16px;
-
-  font-weight: 800;
-
   margin-bottom: 5px;
-}
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
 
 .rule-info p {
   color: #7f879a;
 
-  font-size: 13px;
+  font-size: 12px;
 
   line-height: 1.5;
 }
-
 
 .rule-action {
   flex-shrink: 0;
@@ -643,7 +611,6 @@ header h1 span {
   justify-content: center;
 }
 
-
 .timer svg {
   position: absolute;
 
@@ -653,151 +620,217 @@ header h1 span {
   transform: rotate(-90deg);
 }
 
-
 .timer circle {
   fill: none;
 
   stroke-width: 3;
 }
 
-
 .timer-bg {
   stroke:
-    rgba(255, 255, 255, 0.08);
+    rgba(255,255,255,0.08);
 }
 
-
 .timer-progress {
-  stroke: #9c61ff;
+  stroke: #a467ff;
 
   stroke-linecap: round;
 
-  stroke-dasharray: 113;
+  stroke-dasharray: 125.6;
 
-  stroke-dashoffset: 113;
+  stroke-dashoffset: 125.6;
 
   transition:
-    stroke-dashoffset 0.4s linear;
+    stroke-dashoffset 10s linear;
 }
-
-
-.timer span {
-  position: relative;
-
-  z-index: 2;
-
-  font-size: 14px;
-
-  font-weight: 900;
-
-  color: #ffffff;
-}
-
 
 
 /* =========================================
-   INITIAL LOADING CIRCLE
+   IMPORTANT:
+   INITIAL STATE
 ========================================= */
 
-.timer.loading::after {
+/*
+  Walang loading.
+  Walang number.
+  Walang animation.
+*/
+
+.timer.idle {
+  opacity: 0.65;
+}
+
+.timer.idle .timer-progress {
+  stroke-dashoffset: 125.6;
+}
+
+.timer.idle .success-check {
+  display: none;
+}
+
+
+/* =========================================
+   COUNTING STATE
+========================================= */
+
+/*
+  Loading animation starts ONLY
+  after Subscribe / Like is clicked.
+*/
+
+.timer.counting {
+  opacity: 1;
+}
+
+.timer.counting::after {
   content: "";
 
   position: absolute;
 
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
 
   border-radius: 50%;
 
-  border:
-    2px solid
-    rgba(255, 255, 255, 0.12);
+  border: 2px solid
+    rgba(255,255,255,0.12);
 
   border-top-color:
-    #a46aff;
+    #a76aff;
 
   animation:
-    spinner 0.8s linear infinite;
+    spin 0.75s linear infinite;
 }
 
-
-@keyframes spinner {
+@keyframes spin {
 
   to {
     transform: rotate(360deg);
   }
-
 }
 
 
-/* Hide number before countdown */
-.timer.loading span {
-  display: none;
+/*
+  NUMBER ALWAYS HIDDEN
+*/
+
+.timer span {
+  display: none !important;
 }
 
 
 /* =========================================
-   READY TIMER
+   COMPLETED TIMER
 ========================================= */
 
-.timer.ready::after {
-  content: "";
+.timer.completed {
+  opacity: 1;
+}
 
+.timer.completed::after {
+  display: none;
+}
+
+.timer.completed .timer-progress {
+  stroke: #62e5a0;
+
+  stroke-dashoffset: 0;
+}
+
+
+/* =========================================
+   BEAUTIFUL CHECK
+========================================= */
+
+.success-check {
   position: absolute;
 
-  width: 14px;
-  height: 14px;
+  width: 30px;
+  height: 30px;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
 
   border-radius: 50%;
 
-  border:
-    2px solid
-    rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(
+      145deg,
+      #39e58c,
+      #159f61
+    );
 
-  border-top-color:
-    #58d9ff;
+  box-shadow:
+    0 0 18px
+    rgba(54,230,143,0.45);
 
   animation:
-    spinner 0.8s linear infinite;
+    checkPop 0.45s cubic-bezier(
+      0.175,
+      0.885,
+      0.32,
+      1.275
+    );
 }
 
+.success-check svg {
+  position: relative;
 
-.timer.ready span {
-  display: none;
+  width: 19px;
+  height: 19px;
+
+  transform: none;
 }
 
+.success-check path {
+  fill: none;
 
+  stroke: white;
 
-/* =========================================
-   TIMER ACTIVE
-========================================= */
+  stroke-width: 2.8;
 
-.timer.active::after {
-  display: none;
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  stroke-dasharray: 30;
+
+  stroke-dashoffset: 30;
+
+  animation:
+    drawCheck 0.45s
+    0.1s
+    ease forwards;
 }
 
-
-.timer.active span {
-  display: block !important;
+.timer.completed .success-check {
+  display: flex;
 }
 
+@keyframes checkPop {
 
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
 
-/* =========================================
-   TIMER DONE
-========================================= */
+  70% {
+    transform: scale(1.15);
+  }
 
-.timer.done span {
-  display: block;
-
-  color: #7dffb2;
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
+@keyframes drawCheck {
 
-.timer.done .timer-progress {
-  stroke: #55e39a;
-
-  stroke-dashoffset: 0 !important;
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 
@@ -808,12 +841,14 @@ header h1 span {
 
 .action-btn,
 .tiktok-btn {
+  min-height: 44px;
+
   display: inline-flex;
 
   align-items: center;
   justify-content: center;
 
-  min-height: 44px;
+  gap: 8px;
 
   padding: 0 17px;
 
@@ -821,9 +856,13 @@ header h1 span {
 
   text-decoration: none;
 
-  font-size: 13px;
+  font-family:
+    "Space Grotesk",
+    sans-serif;
 
-  font-weight: 850;
+  font-size: 12px;
+
+  font-weight: 700;
 
   transition:
     transform 0.2s ease,
@@ -831,61 +870,68 @@ header h1 span {
     opacity 0.2s ease;
 }
 
-
 .action-btn:hover,
 .tiktok-btn:hover {
   transform: translateY(-2px);
 }
 
+.btn-icon {
+  font-size: 13px;
+}
+
+
+/* YouTube */
 
 .youtube {
-  color: #ffffff;
+  color: white;
 
   background:
     linear-gradient(
       135deg,
       #ff3158,
-      #d90032
+      #d60032
     );
 
   box-shadow:
     0 8px 25px
-    rgba(255, 32, 75, 0.20);
+    rgba(255,32,75,0.20);
 }
-
 
 .youtube:hover {
   box-shadow:
     0 10px 35px
-    rgba(255, 32, 75, 0.35);
+    rgba(255,32,75,0.35);
 }
 
 
+/* Like */
+
 .like {
-  color: #ffffff;
+  color: white;
 
   background:
     linear-gradient(
       135deg,
       #a64dff,
-      #6730df
+      #6830df
     );
 
   box-shadow:
     0 8px 25px
-    rgba(133, 65, 255, 0.20);
+    rgba(133,65,255,0.20);
 }
-
 
 .like:hover {
   box-shadow:
     0 10px 35px
-    rgba(133, 65, 255, 0.35);
+    rgba(133,65,255,0.35);
 }
 
 
+/* Comment */
+
 .comment {
-  color: #ffffff;
+  color: white;
 
   background:
     linear-gradient(
@@ -893,20 +939,15 @@ header h1 span {
       #3b9dff,
       #3562e8
     );
-
-  box-shadow:
-    0 8px 25px
-    rgba(59, 125, 255, 0.18);
 }
-
 
 
 /* =========================================
    DISABLED
 ========================================= */
 
-.disabled {
-  opacity: 0.35;
+.action-btn.disabled {
+  opacity: 0.28;
 
   pointer-events: none;
 
@@ -914,38 +955,52 @@ header h1 span {
 }
 
 
-.timer.locked {
-  opacity: 0.45;
-}
-
-
-
 /* =========================================
-   PROCESSING
+   PROCESSING / COMPLETED
 ========================================= */
 
-.processing {
+.action-btn.processing {
   pointer-events: none;
 
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
-
-.completed {
+.action-btn.completed {
   pointer-events: none;
 
   opacity: 0.85;
+
+  background:
+    linear-gradient(
+      135deg,
+      #27c77c,
+      #15975c
+    );
 }
 
 
 
 /* =========================================
-   CHECK ICON
+   READY
 ========================================= */
 
-.check-icon {
-  width: 45px;
-  height: 45px;
+.action-btn.ready {
+  opacity: 1;
+}
+
+.timer.ready {
+  opacity: 0.75;
+}
+
+
+
+/* =========================================
+   FINAL CHECK
+========================================= */
+
+.final-check {
+  width: 46px;
+  height: 46px;
 
   flex-shrink: 0;
 
@@ -956,28 +1011,42 @@ header h1 span {
 
   border-radius: 50%;
 
-  color: #6dffad;
-
   background:
-    rgba(72, 255, 153, 0.08);
+    linear-gradient(
+      145deg,
+      #273f35,
+      #12231c
+    );
 
-  border:
-    1px solid
-    rgba(72, 255, 153, 0.18);
-
-  font-size: 20px;
-
-  font-weight: 900;
+  border: 1px solid
+    rgba(76,230,148,0.28);
 
   box-shadow:
     0 0 25px
-    rgba(72, 255, 153, 0.08);
+    rgba(54,220,133,0.10);
+}
+
+.final-check svg {
+  width: 23px;
+  height: 23px;
+}
+
+.final-check path {
+  fill: none;
+
+  stroke: #6ff0aa;
+
+  stroke-width: 2.6;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
 }
 
 
 
 /* =========================================
-   TIKTOK BOX
+   TIKTOK
 ========================================= */
 
 .tiktok-box {
@@ -994,7 +1063,7 @@ header h1 span {
   border-radius: 20px;
 
   border: 1px solid
-    rgba(255, 255, 255, 0.07);
+    rgba(255,255,255,0.07);
 
   background:
     linear-gradient(
@@ -1004,12 +1073,11 @@ header h1 span {
     );
 }
 
-
 .tiktok-icon {
-  flex-shrink: 0;
-
   width: 58px;
   height: 58px;
+
+  flex-shrink: 0;
 
   display: flex;
 
@@ -1021,76 +1089,60 @@ header h1 span {
   background:
     linear-gradient(
       145deg,
-      #111827,
-      #070b12
+      #151b28,
+      #080c13
     );
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.10);
+  border: 1px solid
+    rgba(255,255,255,0.10);
 
-  font-size: 28px;
-
-  box-shadow:
-    0 0 30px
-    rgba(255, 255, 255, 0.05);
+  font-size: 27px;
 }
-
 
 .tiktok-content {
   flex: 1;
 }
 
-
 .tiktok-content h2 {
   margin: 4px 0;
 
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
   font-size: 18px;
 
-  font-weight: 850;
+  font-weight: 700;
 }
-
 
 .tiktok-content p:not(.small-title) {
   color: #858da0;
 
-  font-size: 13px;
+  font-size: 12px;
 
   line-height: 1.5;
 }
 
-
 .tiktok-content strong {
   display: inline-block;
 
-  margin-top: 7px;
+  margin-top: 6px;
 
-  color: #ffffff;
-
-  font-size: 13px;
+  font-size: 12px;
 }
 
-
 .tiktok-btn {
-  color: #ffffff;
+  color: white;
 
   background:
     linear-gradient(
       135deg,
-      #111827,
-      #252d3e
+      #151b28,
+      #272f40
     );
 
-  border:
-    1px solid
-    rgba(255, 255, 255, 0.10);
-}
-
-
-.tiktok-btn:hover {
-  box-shadow:
-    0 10px 30px
-    rgba(0, 0, 0, 0.30);
+  border: 1px solid
+    rgba(255,255,255,0.10);
 }
 
 
@@ -1113,20 +1165,19 @@ header h1 span {
   border-radius: 13px;
 
   background:
-    rgba(255, 255, 255, 0.025);
+    rgba(255,255,255,0.025);
 
   color: #777f92;
 
-  font-size: 12px;
+  font-size: 11px;
 
   line-height: 1.5;
 }
 
-
 .notice span {
   color: #a56cff;
 
-  font-size: 17px;
+  font-size: 16px;
 }
 
 
@@ -1142,7 +1193,7 @@ footer {
 
   color: #555d70;
 
-  font-size: 12px;
+  font-size: 11px;
 
   letter-spacing: 0.5px;
 }
@@ -1156,14 +1207,11 @@ footer {
 @media (max-width: 700px) {
 
   .container {
-    width: min(
-      100% - 18px,
-      900px
-    );
+    width:
+      calc(100% - 18px);
 
     padding-top: 30px;
   }
-
 
   .card {
     padding: 18px;
@@ -1171,57 +1219,32 @@ footer {
     border-radius: 22px;
   }
 
-
   header h1 {
     font-size: 47px;
 
     letter-spacing: -3px;
   }
 
-
-  .subtitle {
-    font-size: 13px;
-  }
-
-
-  .prize {
-    padding: 28px 15px;
-  }
-
-
-  .prize h2 {
-    font-size: 29px;
-  }
-
-
   .rule {
     gap: 12px;
 
     padding: 14px;
-
-    align-items: flex-start;
   }
-
 
   .rule-number {
     width: 38px;
     height: 38px;
 
     border-radius: 11px;
-
-    font-size: 10px;
   }
-
 
   .rule-info h3 {
-    font-size: 14px;
+    font-size: 13px;
   }
-
 
   .rule-info p {
-    font-size: 11px;
+    font-size: 10px;
   }
-
 
   .rule-action {
     flex-direction: column;
@@ -1229,27 +1252,23 @@ footer {
     gap: 7px;
   }
 
-
   .action-btn {
     min-height: 39px;
 
     padding: 0 12px;
 
-    font-size: 11px;
+    font-size: 10px;
   }
-
 
   .timer {
     width: 45px;
     height: 45px;
   }
 
-
   .timer svg {
     width: 45px;
     height: 45px;
   }
-
 
   .tiktok-box {
     align-items: flex-start;
@@ -1257,16 +1276,8 @@ footer {
     flex-wrap: wrap;
   }
 
-
-  .tiktok-content {
-    min-width: 0;
-  }
-
-
   .tiktok-btn {
     width: 100%;
-
-    margin-left: 76px;
   }
 
 }
@@ -1284,40 +1295,19 @@ footer {
 
     grid-template-columns:
       38px 1fr;
-
-    align-items: center;
   }
-
 
   .rule-action {
     grid-column: 2;
 
     flex-direction: row;
 
-    justify-content: flex-start;
-
     margin-top: 5px;
   }
 
-
-  .check-icon {
+  .final-check {
     width: 38px;
     height: 38px;
-
-    font-size: 17px;
-  }
-
-
-  .tiktok-icon {
-    width: 50px;
-    height: 50px;
-
-    font-size: 24px;
-  }
-
-
-  .tiktok-btn {
-    margin-left: 0;
   }
 
 }
