@@ -1310,4 +1310,1204 @@ footer {
     height: 38px;
   }
 
+}    radial-gradient(
+      1px 1px at 10% 20%,
+      white,
+      transparent
+    ),
+
+    radial-gradient(
+      1px 1px at 25% 80%,
+      white,
+      transparent
+    ),
+
+    radial-gradient(
+      1px 1px at 40% 35%,
+      white,
+      transparent
+    ),
+
+    radial-gradient(
+      1px 1px at 55% 70%,
+      white,
+      transparent
+    ),
+
+    radial-gradient(
+      1px 1px at 75% 25%,
+      white,
+      transparent
+    ),
+
+    radial-gradient(
+      1px 1px at 90% 65%,
+      white,
+      transparent
+    );
+
+  animation:
+    starsMove 16s linear infinite;
+
+  z-index: 0;
+}
+
+@keyframes starsMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100px);
+  }
+}
+
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.container {
+  position: relative;
+
+  z-index: 1;
+
+  width: min(
+    calc(100% - 30px),
+    900px
+  );
+
+  margin: auto;
+
+  padding: 55px 0 30px;
+}
+
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+  text-align: center;
+
+  margin-bottom: 32px;
+}
+
+.badge {
+  display: inline-flex;
+
+  padding: 9px 17px;
+
+  border-radius: 999px;
+
+  border: 1px solid
+    rgba(169, 112, 255, 0.40);
+
+  background:
+    rgba(124, 61, 255, 0.10);
+
+  color: #c9a7ff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  box-shadow:
+    0 0 30px
+    rgba(126, 62, 255, 0.15);
+}
+
+header h1 {
+  margin-top: 20px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: clamp(
+    45px,
+    9vw,
+    82px
+  );
+
+  line-height: 0.95;
+
+  font-weight: 700;
+
+  letter-spacing: -4px;
+}
+
+header h1 span {
+  display: block;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #a76bff,
+      #62d9ff,
+      #ffffff
+    );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+
+  animation:
+    gradientMove 5s linear infinite;
+}
+
+@keyframes gradientMove {
+
+  to {
+    background-position: 250% center;
+  }
+}
+
+.subtitle {
+  margin-top: 15px;
+
+  color: #8b93a8;
+
+  font-size: 14px;
+
+  font-weight: 500;
+}
+
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 30px;
+
+  border-radius: 28px;
+
+  border: 1px solid
+    rgba(255,255,255,0.08);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(22,26,40,0.97),
+      rgba(8,11,18,0.98)
+    );
+
+  box-shadow:
+
+    0 30px 90px
+    rgba(0,0,0,0.45),
+
+    inset 0 1px 0
+    rgba(255,255,255,0.05);
+}
+
+.shine {
+  position: absolute;
+
+  width: 300px;
+  height: 100%;
+
+  left: -450px;
+  top: 0;
+
+  transform: skewX(-20deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.07),
+      transparent
+    );
+
+  animation:
+    shineMove 8s ease-in-out infinite;
+
+  pointer-events: none;
+}
+
+@keyframes shineMove {
+
+  0% {
+    left: -450px;
+  }
+
+  35% {
+    left: 120%;
+  }
+
+  100% {
+    left: 120%;
+  }
+}
+
+
+
+/* =========================================
+   PRIZE
+========================================= */
+
+.prize {
+  text-align: center;
+
+  padding: 35px 20px;
+
+  margin-bottom: 35px;
+
+  border-radius: 22px;
+
+  border: 1px solid
+    rgba(157, 94, 255, 0.18);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(125,65,255,0.15),
+      transparent 65%
+    );
+}
+
+.prize-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(174,117,255,0.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      #21143b,
+      #0d111c
+    );
+
+  font-size: 36px;
+
+  box-shadow:
+    0 0 45px
+    rgba(130,70,255,0.28);
+
+  animation:
+    prizeFloat 3s ease-in-out infinite;
+}
+
+@keyframes prizeFloat {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.small-title {
+  color: #858da2;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.prize h2 {
+  margin-top: 5px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 35px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 25px
+    rgba(161,100,255,0.35);
+}
+
+.reward-text {
+  margin-top: 5px;
+
+  color: #a4acbd;
+
+  font-size: 14px;
+}
+
+
+
+/* =========================================
+   RULES
+========================================= */
+
+.section-title {
+  margin-bottom: 18px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.rule {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  min-height: 105px;
+
+  padding: 18px;
+
+  margin-bottom: 12px;
+
+  border-radius: 18px;
+
+  border: 1px solid
+    rgba(255,255,255,0.06);
+
+  background:
+    rgba(255,255,255,0.025);
+
+  transition:
+    0.25s ease;
+}
+
+.rule:hover {
+  transform: translateY(-2px);
+
+  border-color:
+    rgba(158,96,255,0.28);
+
+  background:
+    rgba(145,80,255,0.045);
+}
+
+.rule-number {
+  flex-shrink: 0;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(130,70,255,0.20),
+      rgba(50,30,100,0.12)
+    );
+
+  border: 1px solid
+    rgba(161,103,255,0.18);
+
+  color: #b998ff;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.rule-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.rule-info h3 {
+  margin-bottom: 5px;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+.rule-info p {
+  color: #7f879a;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.rule-action {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+
+/* =========================================
+   TIMER
+========================================= */
+
+.timer {
+  position: relative;
+
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.timer svg {
+  position: absolute;
+
+  width: 52px;
+  height: 52px;
+
+  transform: rotate(-90deg);
+}
+
+.timer circle {
+  fill: none;
+
+  stroke-width: 3;
+}
+
+.timer-bg {
+  stroke:
+    rgba(255,255,255,0.08);
+}
+
+.timer-progress {
+  stroke: #a467ff;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 125.6;
+
+  stroke-dashoffset: 125.6;
+
+  transition:
+    stroke-dashoffset 10s linear;
+}
+
+
+/* =========================================
+   IMPORTANT:
+   INITIAL STATE
+========================================= */
+
+/*
+  Walang loading.
+  Walang number.
+  Walang animation.
+*/
+
+.timer.idle {
+  opacity: 0.65;
+}
+
+.timer.idle .timer-progress {
+  stroke-dashoffset: 125.6;
+}
+
+.timer.idle .success-check {
+  display: none;
+}
+
+
+/* =========================================
+   COUNTING STATE
+========================================= */
+
+/*
+  Loading animation starts ONLY
+  after Subscribe / Like is clicked.
+*/
+
+.timer.counting {
+  opacity: 1;
+}
+
+.timer.counting::after {
+  content: "";
+
+  position: absolute;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  border: 2px solid
+    rgba(255,255,255,0.12);
+
+  border-top-color:
+    #a76aff;
+
+  animation:
+    spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/*
+  NUMBER ALWAYS HIDDEN
+*/
+
+.timer span {
+  display: none !important;
+}
+
+
+/* =========================================
+   COMPLETED TIMER
+========================================= */
+
+.timer.completed {
+  opacity: 1;
+}
+
+.timer.completed::after {
+  display: none;
+}
+
+.timer.completed .timer-progress {
+  stroke: #62e5a0;
+
+  stroke-dashoffset: 0;
+}
+
+
+/* =========================================
+   BEAUTIFUL CHECK
+========================================= */
+
+.success-check {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #39e58c,
+      #159f61
+    );
+
+  box-shadow:
+    0 0 18px
+    rgba(54,230,143,0.45);
+
+  animation:
+    checkPop 0.45s cubic-bezier(
+      0.175,
+      0.885,
+      0.32,
+      1.275
+    );
+}
+
+.success-check svg {
+  position: relative;
+
+  width: 19px;
+  height: 19px;
+
+  transform: none;
+}
+
+.success-check path {
+  fill: none;
+
+  stroke: white;
+
+  stroke-width: 2.8;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+
+  stroke-dasharray: 30;
+
+  stroke-dashoffset: 30;
+
+  animation:
+    drawCheck 0.45s
+    0.1s
+    ease forwards;
+}
+
+.timer.completed .success-check {
+  display: flex;
+}
+
+@keyframes checkPop {
+
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes drawCheck {
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.action-btn,
+.tiktok-btn {
+  min-height: 44px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 17px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.action-btn:hover,
+.tiktok-btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 13px;
+}
+
+
+/* YouTube */
+
+.youtube {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff3158,
+      #d60032
+    );
+
+  box-shadow:
+    0 8px 25px
+    rgba(255,32,75,0.20);
+}
+
+.youtube:hover {
+  box-shadow:
+    0 10px 35px
+    rgba(255,32,75,0.35);
+}
+
+
+/* Like */
+
+.like {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #a64dff,
+      #6830df
+    );
+
+  box-shadow:
+    0 8px 25px
+    rgba(133,65,255,0.20);
+}
+
+.like:hover {
+  box-shadow:
+    0 10px 35px
+    rgba(133,65,255,0.35);
+}
+
+
+/* Comment */
+
+.comment {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3b9dff,
+      #3562e8
+    );
+}
+
+
+/* =========================================
+   DISABLED
+========================================= */
+
+.action-btn.disabled {
+  opacity: 0.28;
+
+  pointer-events: none;
+
+  filter: grayscale(0.5);
+}
+
+
+/* =========================================
+   PROCESSING / COMPLETED
+========================================= */
+
+.action-btn.processing {
+  pointer-events: none;
+
+  opacity: 0.75;
+}
+
+.action-btn.completed {
+  pointer-events: none;
+
+  opacity: 0.85;
+
+  background:
+    linear-gradient(
+      135deg,
+      #27c77c,
+      #15975c
+    );
+}
+
+
+
+/* =========================================
+   READY
+========================================= */
+
+.action-btn.ready {
+  opacity: 1;
+}
+
+.timer.ready {
+  opacity: 0.75;
+}
+
+
+
+/* =========================================
+   FINAL CHECK
+========================================= */
+
+.final-check {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #273f35,
+      #12231c
+    );
+
+  border: 1px solid
+    rgba(76,230,148,0.28);
+
+  box-shadow:
+    0 0 25px
+    rgba(54,220,133,0.10);
+}
+
+.final-check svg {
+  width: 23px;
+  height: 23px;
+}
+
+.final-check path {
+  fill: none;
+
+  stroke: #6ff0aa;
+
+  stroke-width: 2.6;
+
+  stroke-linecap: round;
+
+  stroke-linejoin: round;
+}
+
+
+
+/* =========================================
+   TIKTOK
+========================================= */
+
+.tiktok-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 25px;
+
+  padding: 22px;
+
+  border-radius: 20px;
+
+  border: 1px solid
+    rgba(255,255,255,0.07);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.035),
+      rgba(255,255,255,0.015)
+    );
+}
+
+.tiktok-icon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #151b28,
+      #080c13
+    );
+
+  border: 1px solid
+    rgba(255,255,255,0.10);
+
+  font-size: 27px;
+}
+
+.tiktok-content {
+  flex: 1;
+}
+
+.tiktok-content h2 {
+  margin: 4px 0;
+
+  font-family:
+    "Space Grotesk",
+    sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.tiktok-content p:not(.small-title) {
+  color: #858da0;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+}
+
+.tiktok-content strong {
+  display: inline-block;
+
+  margin-top: 6px;
+
+  font-size: 12px;
+}
+
+.tiktok-btn {
+  color: white;
+
+  background:
+    linear-gradient(
+      135deg,
+      #151b28,
+      #272f40
+    );
+
+  border: 1px solid
+    rgba(255,255,255,0.10);
+}
+
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.notice {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  padding: 14px 16px;
+
+  border-radius: 13px;
+
+  background:
+    rgba(255,255,255,0.025);
+
+  color: #777f92;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+.notice span {
+  color: #a56cff;
+
+  font-size: 16px;
+}
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  padding-top: 25px;
+
+  text-align: center;
+
+  color: #555d70;
+
+  font-size: 11px;
+
+  letter-spacing: 0.5px;
+}
+
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .container {
+    width:
+      calc(100% - 18px);
+
+    padding-top: 30px;
+  }
+
+  .card {
+    padding: 18px;
+
+    border-radius: 22px;
+  }
+
+  header h1 {
+    font-size: 47px;
+
+    letter-spacing: -3px;
+  }
+
+  .rule {
+    gap: 12px;
+
+    padding: 14px;
+  }
+
+  .rule-number {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 11px;
+  }
+
+  .rule-info h3 {
+    font-size: 13px;
+  }
+
+  .rule-info p {
+    font-size: 10px;
+  }
+
+  .rule-action {
+    flex-direction: column;
+
+    gap: 7px;
+  }
+
+  .action-btn {
+    min-height: 39px;
+
+    padding: 0 12px;
+
+    font-size: 10px;
+  }
+
+  .timer {
+    width: 45px;
+    height: 45px;
+  }
+
+  .timer svg {
+    width: 45px;
+    height: 45px;
+  }
+
+  .tiktok-box {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .tiktok-btn {
+    width: 100%;
+  }
+
+}
+
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .rule {
+    display: grid;
+
+    grid-template-columns:
+      38px 1fr;
+  }
+
+  .rule-action {
+    grid-column: 2;
+
+    flex-direction: row;
+
+    margin-top: 5px;
+  }
+
+  .final-check {
+    width: 38px;
+    height: 38px;
+  }
+
 }
