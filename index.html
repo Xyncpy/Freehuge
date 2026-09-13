@@ -6,12 +6,20 @@
 
   <title>XYN FREE HUGE</title>
 
+  <!-- Premium Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- BACKGROUND EFFECTS -->
+  <!-- Background -->
   <div class="bg-glow glow-1"></div>
   <div class="bg-glow glow-2"></div>
   <div class="stars"></div>
@@ -67,12 +75,12 @@
       <!-- RULES -->
       <section class="rules">
 
-        <h2>
+        <h2 class="section-title">
           Giveaway Rules
         </h2>
 
 
-        <!-- STEP 1 -->
+        <!-- SUBSCRIBE -->
         <div class="rule">
 
           <div class="rule-number">
@@ -94,29 +102,39 @@
 
           <div class="rule-action">
 
-            <!-- LOADING CIRCLE -->
-            <div class="timer loading" id="subscribeTimer">
+            <!-- NO LOADING AT START -->
+            <div
+              class="timer idle"
+              id="subscribeTimer">
 
-              <svg viewBox="0 0 42 42">
+              <svg viewBox="0 0 48 48">
 
                 <circle
                   class="timer-bg"
-                  cx="21"
-                  cy="21"
-                  r="18">
+                  cx="24"
+                  cy="24"
+                  r="20">
                 </circle>
 
                 <circle
                   class="timer-progress"
-                  cx="21"
-                  cy="21"
-                  r="18"
+                  cx="24"
+                  cy="24"
+                  r="20"
                   id="subscribeCircle">
                 </circle>
 
               </svg>
 
+              <!-- Hidden number -->
               <span id="subscribeNumber"></span>
+
+              <!-- Beautiful check -->
+              <div class="success-check">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12.5L9.5 17L19 7.5"></path>
+                </svg>
+              </div>
 
             </div>
 
@@ -127,7 +145,8 @@
               class="action-btn youtube"
               id="subscribeBtn">
 
-              ▶ Subscribe
+              <span class="btn-icon">▶</span>
+              Subscribe
 
             </a>
 
@@ -137,7 +156,7 @@
 
 
 
-        <!-- STEP 2 -->
+        <!-- LIKE -->
         <div class="rule">
 
           <div class="rule-number">
@@ -159,29 +178,37 @@
 
           <div class="rule-action">
 
-            <!-- LOADING CIRCLE -->
-            <div class="timer loading locked" id="likeTimer">
+            <!-- IDLE: NOTHING ANIMATES -->
+            <div
+              class="timer idle locked"
+              id="likeTimer">
 
-              <svg viewBox="0 0 42 42">
+              <svg viewBox="0 0 48 48">
 
                 <circle
                   class="timer-bg"
-                  cx="21"
-                  cy="21"
-                  r="18">
+                  cx="24"
+                  cy="24"
+                  r="20">
                 </circle>
 
                 <circle
                   class="timer-progress"
-                  cx="21"
-                  cy="21"
-                  r="18"
+                  cx="24"
+                  cy="24"
+                  r="20"
                   id="likeCircle">
                 </circle>
 
               </svg>
 
               <span id="likeNumber"></span>
+
+              <div class="success-check">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12.5L9.5 17L19 7.5"></path>
+                </svg>
+              </div>
 
             </div>
 
@@ -192,7 +219,8 @@
               class="action-btn like disabled"
               id="likeBtn">
 
-              ♥ Like
+              <span class="btn-icon">♥</span>
+              Like
 
             </a>
 
@@ -202,7 +230,7 @@
 
 
 
-        <!-- STEP 3 -->
+        <!-- COMMENT -->
         <div class="rule">
 
           <div class="rule-number">
@@ -230,7 +258,8 @@
               class="action-btn comment disabled"
               id="commentBtn">
 
-              💬 Comment
+              <span class="btn-icon">💬</span>
+              Comment
 
             </a>
 
@@ -240,7 +269,7 @@
 
 
 
-        <!-- STEP 4 -->
+        <!-- SCREENSHOT -->
         <div class="rule">
 
           <div class="rule-number">
@@ -260,8 +289,13 @@
           </div>
 
 
-          <div class="check-icon">
-            ✓
+          <!-- PREMIUM CHECK -->
+          <div class="final-check">
+
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12.5L9.5 17L19 7.5"></path>
+            </svg>
+
           </div>
 
         </div>
@@ -315,9 +349,7 @@
       <!-- NOTICE -->
       <div class="notice">
 
-        <span>
-          ⓘ
-        </span>
+        <span>ⓘ</span>
 
         Your entry will be manually checked before the winner is selected.
 
@@ -326,11 +358,8 @@
     </main>
 
 
-    <!-- FOOTER -->
     <footer>
-
       © 2026 XYN FREE HUGE
-
     </footer>
 
   </div>
@@ -341,9 +370,9 @@
   <script>
 
     /*
-      =========================================
-      PUT YOUR GIVEAWAY VIDEO LINK HERE
-      =========================================
+    =========================================
+    PUT YOUR GIVEAWAY VIDEO LINK HERE
+    =========================================
     */
 
     const giveawayVideo =
@@ -351,23 +380,13 @@
 
 
     /*
-      =========================================
-      VIDEO BUTTONS
-      =========================================
+    =========================================
+    ELEMENTS
+    =========================================
     */
 
-    const likeBtn =
-      document.getElementById("likeBtn");
-
-    const commentBtn =
-      document.getElementById("commentBtn");
-
-
-    /*
-      =========================================
-      TIMER ELEMENTS
-      =========================================
-    */
+    const subscribeBtn =
+      document.getElementById("subscribeBtn");
 
     const subscribeTimer =
       document.getElementById("subscribeTimer");
@@ -378,9 +397,9 @@
     const subscribeCircle =
       document.getElementById("subscribeCircle");
 
-    const subscribeBtn =
-      document.getElementById("subscribeBtn");
 
+    const likeBtn =
+      document.getElementById("likeBtn");
 
     const likeTimer =
       document.getElementById("likeTimer");
@@ -392,15 +411,20 @@
       document.getElementById("likeCircle");
 
 
+    const commentBtn =
+      document.getElementById("commentBtn");
+
+
     /*
-      =========================================
-      SET VIDEO LINK
-      =========================================
+    =========================================
+    VIDEO LINK
+    =========================================
     */
 
     if (
       giveawayVideo &&
-      giveawayVideo !== "PASTE-YOUR-YOUTUBE-VIDEO-LINK-HERE"
+      giveawayVideo !==
+      "PASTE-YOUR-YOUTUBE-VIDEO-LINK-HERE"
     ) {
 
       likeBtn.href = giveawayVideo;
@@ -411,45 +435,44 @@
 
 
     /*
-      =========================================
-      TIMER FUNCTION
-      =========================================
+    =========================================
+    START TIMER
+    =========================================
     */
 
     function startTimer(
       timer,
       number,
       circle,
-      finishedFunction
+      onFinish
     ) {
 
       let time = 10;
 
-
       /*
-        Remove loading animation
+      Remove idle state
       */
 
-      timer.classList.remove("loading");
+      timer.classList.remove("idle");
 
-      timer.classList.add("active");
+      timer.classList.remove("ready");
 
-
-      /*
-        Show number ONLY after button
-        has been clicked
-      */
-
-      number.style.display = "block";
-
-      number.textContent = time;
+      timer.classList.add("counting");
 
 
       /*
-        SVG circle
+      IMPORTANT:
+      Number stays HIDDEN.
       */
 
-      const circumference = 113;
+      number.textContent = "";
+
+
+      /*
+      Circle settings
+      */
+
+      const circumference = 125.6;
 
       circle.style.strokeDasharray =
         circumference;
@@ -458,16 +481,20 @@
         circumference;
 
 
+      /*
+      Start circular animation
+      */
+
       setTimeout(() => {
 
-        circle.style.strokeDashoffset =
-          circumference * 0.9;
+        circle.style.strokeDashoffset = "0";
 
       }, 50);
 
 
       /*
-        Countdown
+      Countdown happens internally
+      but NUMBER IS NEVER SHOWN.
       */
 
       const countdown =
@@ -475,39 +502,37 @@
 
           time--;
 
-          number.textContent = time;
-
-
-          const progress =
-            circumference -
-            (time / 10) * circumference;
-
-
-          circle.style.strokeDashoffset =
-            progress;
-
-
-          /*
-            Finished
-          */
-
           if (time <= 0) {
 
             clearInterval(countdown);
 
 
-            number.textContent = "✓";
+            /*
+            Finished
+            */
 
-            timer.classList.remove("active");
+            timer.classList.remove(
+              "counting"
+            );
 
-            timer.classList.add("done");
+            timer.classList.add(
+              "completed"
+            );
 
 
-            if (finishedFunction) {
+            circle.style.strokeDashoffset =
+              "0";
+
+
+            /*
+            Show beautiful check
+            */
+
+            if (onFinish) {
 
               setTimeout(() => {
 
-                finishedFunction();
+                onFinish();
 
               }, 500);
 
@@ -522,9 +547,9 @@
 
 
     /*
-      =========================================
-      SUBSCRIBE BUTTON
-      =========================================
+    =========================================
+    SUBSCRIBE CLICK
+    =========================================
     */
 
     subscribeBtn.addEventListener(
@@ -532,12 +557,16 @@
       function () {
 
         /*
-          Prevent multiple clicks
+        Prevent double click
         */
 
         if (
-          subscribeBtn.classList.contains("processing") ||
-          subscribeBtn.classList.contains("completed")
+          subscribeBtn.classList.contains(
+            "processing"
+          ) ||
+          subscribeBtn.classList.contains(
+            "completed"
+          )
         ) {
 
           return;
@@ -545,15 +574,17 @@
         }
 
 
-        subscribeBtn.classList.add("processing");
+        subscribeBtn.classList.add(
+          "processing"
+        );
 
-        subscribeBtn.textContent =
-          "✓ Subscribed";
+
+        subscribeBtn.innerHTML =
+          '<span class="btn-icon">✓</span> Processing...';
 
 
         /*
-          START 10 SECOND COUNTDOWN
-          ONLY AFTER CLICK
+        ONLY NOW DOES THE CIRCLE LOAD
         */
 
         startTimer(
@@ -569,9 +600,9 @@
 
 
     /*
-      =========================================
-      ENABLE LIKE AFTER SUBSCRIBE
-      =========================================
+    =========================================
+    ENABLE LIKE
+    =========================================
     */
 
     function enableLike() {
@@ -585,12 +616,12 @@
       );
 
 
-      subscribeBtn.textContent =
-        "✓ Completed";
+      subscribeBtn.innerHTML =
+        '<span class="btn-icon">✓</span> Completed';
 
 
       /*
-        Unlock Like button
+      Unlock Like
       */
 
       likeBtn.classList.remove(
@@ -601,16 +632,10 @@
         "ready"
       );
 
-      likeBtn.href =
-        giveawayVideo;
-
 
       /*
-        Make the loading circle visible
-        as READY state.
-
-        IMPORTANT:
-        No number yet.
+      Like circle is STILL NOT LOADING.
+      It remains completely idle.
       */
 
       likeTimer.classList.remove(
@@ -626,9 +651,9 @@
 
 
     /*
-      =========================================
-      LIKE BUTTON
-      =========================================
+    =========================================
+    LIKE CLICK
+    =========================================
     */
 
     likeBtn.addEventListener(
@@ -636,11 +661,13 @@
       function (event) {
 
         /*
-          Don't allow Like before Subscribe
+        Still locked
         */
 
         if (
-          likeBtn.classList.contains("disabled")
+          likeBtn.classList.contains(
+            "disabled"
+          )
         ) {
 
           event.preventDefault();
@@ -651,12 +678,16 @@
 
 
         /*
-          Don't start timer twice
+        Prevent double click
         */
 
         if (
-          likeBtn.classList.contains("processing") ||
-          likeBtn.classList.contains("completed")
+          likeBtn.classList.contains(
+            "processing"
+          ) ||
+          likeBtn.classList.contains(
+            "completed"
+          )
         ) {
 
           return;
@@ -668,13 +699,13 @@
           "processing"
         );
 
-        likeBtn.textContent =
-          "♥ Liked";
+
+        likeBtn.innerHTML =
+          '<span class="btn-icon">♥</span> Processing...';
 
 
         /*
-          START 10 SECOND COUNTDOWN
-          ONLY AFTER LIKE IS PRESSED
+        ONLY NOW DOES LIKE TIMER LOAD
         */
 
         startTimer(
@@ -690,9 +721,9 @@
 
 
     /*
-      =========================================
-      FINISH LIKE
-      =========================================
+    =========================================
+    FINISH LIKE
+    =========================================
     */
 
     function finishLike() {
@@ -705,12 +736,13 @@
         "completed"
       );
 
-      likeBtn.textContent =
-        "✓ Like Completed";
+
+      likeBtn.innerHTML =
+        '<span class="btn-icon">✓</span> Completed';
 
 
       /*
-        Enable Comment
+      Unlock Comment
       */
 
       commentBtn.classList.remove(
@@ -721,23 +753,7 @@
         "ready"
       );
 
-
-      commentBtn.href =
-        giveawayVideo;
-
     }
-
-
-    /*
-      =========================================
-      INITIAL STATE
-      =========================================
-    */
-
-    /*
-      No countdown starts automatically.
-      The circles only show loading.
-    */
 
   </script>
 
